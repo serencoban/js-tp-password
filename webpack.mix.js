@@ -1,4 +1,4 @@
-let mix = require('laravel-mix')
+/* let mix = require('laravel-mix')*/
 
 /*
  |--------------------------------------------------------------------------
@@ -11,7 +11,7 @@ let mix = require('laravel-mix')
  |
  */
 
-mix.js('src/js/main.js', 'dist/js/script.min.js').sass('src/sass/main.scss', 'dist/css/style.min.css')
+/* mix.js('src/js/main.js', 'dist/js/script.min.js').sass('src/sass/main.scss', 'dist/css/style.min.css') */
 
 // Full API
 // mix.js(src, output);
@@ -50,3 +50,16 @@ mix.js('src/js/main.js', 'dist/js/script.min.js').sass('src/sass/main.scss', 'di
 //   terser: {}, // Terser-specific options. https://github.com/webpack-contrib/terser-webpack-plugin#options
 //   postCss: [] // Post-CSS options: https://github.com/postcss/postcss/blob/master/docs/plugins.md
 // });
+
+const passwordInput = document.getElementById('password');
+const buttonElt = document.querySelector('.showPass');
+
+buttonElt.addEventListener('click', () => {
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+        buttonElt.textContent = 'Montrer';
+    }
+});
+
