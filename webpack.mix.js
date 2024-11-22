@@ -51,15 +51,4 @@
 //   postCss: [] // Post-CSS options: https://github.com/postcss/postcss/blob/master/docs/plugins.md
 // });
 
-const passwordInput = document.getElementById('password');
-const buttonElt = document.querySelector('.showPass');
-
-buttonElt.addEventListener('click', () => {
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-    } else {
-        passwordInput.type = 'password';
-        buttonElt.textContent = 'Montrer';
-    }
-});
 
